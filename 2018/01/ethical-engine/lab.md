@@ -1,8 +1,3 @@
-<style>
-    body {margin:auto auto; width:80ex;}
-    blockquote {border-left: 1ex solid #E0E0E0; margin: 0; padding: 0 3ex;}
-</style>
-
 ## The Ethical Engine
 
 Content warning: you will be making imaginary life-or-death choices in this lab.
