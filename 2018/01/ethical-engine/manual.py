@@ -1,6 +1,7 @@
-from audit import audit, log_scenario
+from audit import audit
 
 LOG_FILE = 'decisions.log'
+
 
 def manual_decision(scenario):
     print()
@@ -15,6 +16,7 @@ def manual_decision(scenario):
         return 'passengers'
     else:
         return 'pedestrians'
+
 
 if __name__ == '__main__':
     audit(manual_decision, 60, seed=8675309)

@@ -1,6 +1,8 @@
 import random
 
+
 class Scenario():
+
     """ Packages all of the information needed to create an ethical scenario.
 
     Automatically construct a random scenario in which an autonomous car must
@@ -125,7 +127,7 @@ class Scenario():
         return Scenario(
             [Person.from_string(passenger) for passenger in passengers.split(' ')],
             [Person.from_string(pedestrian) for pedestrian in pedestrians.split(' ')],
-            youInCar=False, 
+            youInCar=False,
             legalCrossing=False,
             pedsInLane=True,
         )
@@ -133,7 +135,9 @@ class Scenario():
 
 #-------------------------------------------------------------------------------#
 
+
 class Person():
+
     """ Packages all the info needed for a person.
 
     Every scenario is composed of characters - many of which are people. Each

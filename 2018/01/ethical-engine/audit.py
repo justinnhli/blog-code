@@ -4,6 +4,7 @@ from datetime import datetime
 
 from scenario import Scenario
 
+
 def serialize_people(people):
     people_attributes = []
     for person in people:
@@ -14,6 +15,7 @@ def serialize_people(people):
         people_attributes.append(','.join(person_attributes))
     return ' '.join(people_attributes)
 
+
 def log_scenario(log_file, scenario, decision):
     with open(log_file, 'a') as fd:
         fd.write(serialize_people(scenario.passengers))
@@ -23,8 +25,10 @@ def log_scenario(log_file, scenario, decision):
         fd.write(decision)
         fd.write('\n')
 
+
 def get_log_file(name):
     return name + '.' + datetime.now().strftime('%Y%m%d%H%M%S') + '.log'
+
 
 def pretty_print_table(table):
     headers = [
@@ -89,9 +93,11 @@ def calculate_stats(log_file):
         table.append([key, '{:2.2%}'.format(percent), str(count_total[key])])
     pretty_print_table(table)
 
+
 def main():
     log_file = 'FIXME'
     calculate_stats(log_file)
+
 
 if __name__ == '__main__':
     main()
